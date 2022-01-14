@@ -148,6 +148,7 @@ public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements
 	 * if necessary.
 	 * <p>To be called for eager registration of singletons, e.g. to be able to
 	 * resolve circular references.
+	 * 为了解决循环依赖,这里将实例化的对象放入到三级缓存中,并且移除了二级缓存中的bean
 	 * @param beanName the name of the bean
 	 * @param singletonFactory the factory for the singleton object
 	 */
@@ -191,8 +192,8 @@ public class DefaultSingletonBeanRegistry extends SimpleAliasRegistry implements
 						if (singletonObject == null) {
 							ObjectFactory<?> singletonFactory = this.singletonFactories.get(beanName);
 							if (singletonFactory != null) {
-								singletonObject = singletonFactory.getObject();
-								this.earlySingletonObjects.put(beanName, singletonObject);
+								singletonObject = singletonFactory.getObject(); // 从lamda表达式里面获取到实例化的对象
+								this.earlySingletonObjects.put(beanName, singletonObject); // 从三级缓存转移到二级缓存中
 								this.singletonFactories.remove(beanName);
 							}
 						}

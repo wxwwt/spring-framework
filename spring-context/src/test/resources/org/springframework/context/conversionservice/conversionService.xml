@@ -30,7 +30,7 @@
 		</property>
 		<property name="resourceMap">
 			<map>
-				<entry key="res1" value="classpath:test1.xml"/>
+				<entry key="res1" value="classpath:robot1.xml"/>
 				<entry key="res2" value="classpath:test2.xml"/>
 			</map>
 		</property>
