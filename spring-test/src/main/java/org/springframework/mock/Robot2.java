@@ -4,7 +4,6 @@ package org.springframework.mock;
  * @author shenchuang
  * @date 2022/1/13 11:01 PM
  */
-
 public class Robot2 {
 
 	private Robot1 robot1;
