@@ -1,4 +1,4 @@
-package org.springframework.mock;
+package org.springframework.test.own;
 
 /**
  * @author shenchuang
@@ -18,5 +18,9 @@ public class Robot1 {
 
 	public void say() {
 		System.out.println("I`m robot1");
+	}
+
+	public Robot1(Robot2 robot2) {
+
 	}
 }

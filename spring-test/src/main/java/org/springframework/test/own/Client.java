@@ -1,4 +1,4 @@
-package org.springframework.mock;
+package org.springframework.test.own;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

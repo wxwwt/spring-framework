@@ -1,4 +1,4 @@
-package org.springframework.mock;
+package org.springframework.test.own;
 
 /**
  * @author shenchuang
