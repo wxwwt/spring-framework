@@ -568,6 +568,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 				beanPostProcess.end();
 
 				// Initialize message source for this context.
+				// 进行国际化的设置
 				initMessageSource();
 
 				// Initialize event multicaster for this context.
